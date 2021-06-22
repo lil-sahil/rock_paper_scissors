@@ -1,0 +1,1 @@
+This project implements a computer game called Rock paper scissors.
