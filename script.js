@@ -1,11 +1,3 @@
-// Computer Play
-
-// console.log(Math.floor(Math.random()*3));
-// let x = [1,2,3]
-// console.log(x.length);
-// console.log(x[0]);
-
-
 function randomSelection(choices){
   return Math.floor(Math.random()*choices);
 }
