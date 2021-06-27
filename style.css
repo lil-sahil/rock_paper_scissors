@@ -51,11 +51,22 @@ body {
     width: 100%;
 }
 
+.selection:hover {
+    cursor: pointer;
+    border: red 3px solid;
+}
+
 .player-choice > div {
     border: red 1px solid;
     padding: 2rem;
 }
 
 .computer-choice {
+    border: 1px red solid;
+    width: 100%;
+}
+
+#result {
+    width: 100%;
     border: 1px red solid;
 }
