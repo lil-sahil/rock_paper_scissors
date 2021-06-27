@@ -4,12 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
+  <header id="title" class="flex-row">
+    <div class="main-title text-primary">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+  </header>
+
+  <section id="game" class ="flex-col">
+    <div class="player-choice flex-row">
+      <div id = "rock" class="selection">
+        <h2>Rock</h2>
+      </div>
+      <div id = "paper" class="selection">
+        <h2>Paper</h2>
+      </div>
+      <div id = "scissors" class="selection">
+        <h2>Scissors</h2>
+      </div>
+    </div>
+
+    <div class="computer-choice">
+      <h2>Computer Selects:</h2>
+      <p>Rock!</p>
+    </div>
+  </section>
+
   
+  <script src="script.js"></script>
 </body>
 
-<script src="script.js"></script>
 </html>
 

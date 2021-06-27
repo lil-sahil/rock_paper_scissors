@@ -7,25 +7,25 @@ function computerPlay(){
   return computerChoices[randomSelection(computerChoices.length)]
 }
 
-function playerSelection() {
-  let flag = true;
-  while (flag) {
-    let playerSelection = prompt("Pick either Rock, Paper or Scissors...");
-    switch (playerSelection.toLowerCase()) {
-      case "rock":
-        flag = false;
-        return playerSelection;
-      case "paper":
-        flag = false;
-        return playerSelection;
-      case "scissors":
-        flag = false;
-        return playerSelection;
-    }
+// function playerSelection() {
+//   let flag = true;
+//   while (flag) {
+//     let playerSelection = prompt("Pick either Rock, Paper or Scissors...");
+//     switch (playerSelection.toLowerCase()) {
+//       case "rock":
+//         flag = false;
+//         return playerSelection;
+//       case "paper":
+//         flag = false;
+//         return playerSelection;
+//       case "scissors":
+//         flag = false;
+//         return playerSelection;
+//     }
 
-    console.log("Invalid Input, pick again.");
-  }
-}
+//     console.log("Invalid Input, pick again.");
+//   }
+// }
 
 
 function playRound(playerSelection, computerSelection) {
@@ -96,5 +96,31 @@ function game(rounds) {
   }
 }
 
-game(5);
 
+const rock = document.querySelector("#rock")
+const paper = document.querySelector("#paper")
+const scissors = document.querySelector("#scissors")
+
+
+rock.addEventListener("click", playRound); 
+paper.addEventListener("click", (e) => "paper"); 
+scissors.addEventListener("click", (e) => "scissors"); 
+
+
+function playerSelection() {
+  
+  switch () {
+    case "rock":
+      flag = false;
+      return playerSelection;
+    case "paper":
+      flag = false;
+      return playerSelection;
+    case "scissors":
+      flag = false;
+      return playerSelection;
+  }
+
+    console.log("Invalid Input, pick again.");
+  }
+}
