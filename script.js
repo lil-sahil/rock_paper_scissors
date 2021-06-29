@@ -7,7 +7,9 @@ const round = document.querySelector(".round p");
 const userScore = document.querySelector(".user-score");
 const compScore = document.querySelector(".comp-score");
 
-let roundInt = 5;
+const numberOfRounds = 5;
+
+let roundInt = 1;
 let uScore = 0;
 let cScore = 0;
 
@@ -28,6 +30,9 @@ scissors.addEventListener("click", () => playRound('scissors', computerPlay()));
 
 
 function playRound(playerSelection, computerSelection) {
+
+  // Style seetings to change back to normal.
+  result.style.fontSize = "1rem";
 
   if ( (playerSelection === "rock") && (computerSelection === "paper") ){
     cScore += 1
@@ -63,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
   roundInt += 1;
   console.log(roundInt);
 
-  if (roundInt === 5) {
+  if (roundInt === numberOfRounds +1) {
     checkGameWinner(uScore, cScore);
   }
 }
