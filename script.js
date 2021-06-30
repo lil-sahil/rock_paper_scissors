@@ -31,7 +31,7 @@ scissors.addEventListener("click", () => playRound('scissors', computerPlay()));
 
 function playRound(playerSelection, computerSelection) {
 
-  // Style seetings to change back to normal.
+  // Style setings to change back to normal.
   result.style.fontSize = "1rem";
 
   if ( (playerSelection === "rock") && (computerSelection === "paper") ){
