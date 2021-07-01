@@ -93,12 +93,9 @@ body {
     border: white 3px solid;
     padding: 1.5rem;
     border-radius: 50%;
-    justify-content: space-between
+    justify-content: space-between;
 }
-/* 
-.round > h2 {
-    margin-bottom: 1rem;
-} */
+
 
 .round p {
     font-size: 1.5rem;
@@ -111,10 +108,15 @@ body {
     width: 100%;
 }
 
+/* Computer Choice */
+
 .computer-choice {
     border: 1px red solid;
     width: 100%;
+    order: -1; 
 }
+
+/* Choice */
 
 #result {
     width: 100%;

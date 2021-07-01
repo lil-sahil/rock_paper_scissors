@@ -29,16 +29,66 @@ paper.addEventListener("click", () => playRound('paper', computerPlay()));
 scissors.addEventListener("click", () => playRound('scissors', computerPlay())); 
 
 // Focus Event Listner
-rock.addEventListener("mouseenter", () => mouseEnter('rock'));
-// paper.addEventListener("mouseenter", () => ); 
-// scissors.addEventListener("mouseenter", () => ); 
+rock.addEventListener("mouseover", () => mouseEnter('rock'));
+rock.addEventListener("mouseout", () => mouseLeave('rock'));
 
+paper.addEventListener("mouseover", () => mouseEnter('paper'));
+paper.addEventListener("mouseout", () => mouseLeave('paper'));
+
+scissors.addEventListener("mouseover", () => mouseEnter('scissors'));
+scissors.addEventListener("mouseout", () => mouseLeave('scissors'));
 
 // Mouse enter content change
-
 function mouseEnter (playerSelection){
   if (playerSelection === 'rock') {
     rock.querySelector('h2').style.display = "none";
+
+    let rockImg = document.createElement('i');
+    rockImg.classList.add('far','fa-hand-rock');
+    rockImg.style.padding = "0 1rem";
+    rockImg.style.fontSize = "2rem"
+
+    rock.appendChild(rockImg);
+  }
+
+  else if (playerSelection === 'paper') {
+    paper.querySelector('h2').style.display = "none";
+
+    let paperImg = document.createElement('i');
+    paperImg.classList.add('fas','fa-hand-paper');
+    paperImg.style.padding = "0 1rem";
+    paperImg.style.fontSize = "2rem"
+
+    paper.appendChild(paperImg);
+  }
+
+  else if (playerSelection === 'scissors') {
+    scissors.querySelector('h2').style.display = "none";
+
+    let scissorImg = document.createElement('i');
+    scissorImg.classList.add('fa','fa-hand-scissors');
+    scissorImg.style.padding = "0 1rem";
+    scissorImg.style.fontSize = "2rem"
+
+    scissors.appendChild(scissorImg);
+  }
+}
+
+// Mouse Leave Content change
+
+function mouseLeave (playerSelection){
+  
+  if (playerSelection === 'rock'){
+    rock.querySelector('h2').style.display = 'block';
+    rock.querySelector('i').remove();
+  }
+  else if (playerSelection === 'paper'){
+    paper.querySelector('h2').style.display = 'block';
+    paper.querySelector('i').remove();
+  }
+  else if (playerSelection === 'scissors'){
+    scissors.querySelector('h2').style.display = 'block';
+    scissors.querySelector('i').remove();
   }
 }
 
@@ -48,6 +98,13 @@ function playRound(playerSelection, computerSelection) {
 
   // Style setings to change back to normal.
   result.style.fontSize = "1rem";
+
+  // If it is Round 1, then the score should be 0.
+
+  if (roundInt === 1) {
+    userScore.textContent = 0;
+    compScore.textContent = 0;
+  }
 
   if ( (playerSelection === "rock") && (computerSelection === "paper") ){
     cScore += 1
