@@ -22,10 +22,25 @@ function computerPlay(){
   return computerChoices[randomSelection(computerChoices.length)]
 }
 
+// Click Event Listner
+
 rock.addEventListener("click", () => playRound('rock', computerPlay()));
 paper.addEventListener("click", () => playRound('paper', computerPlay())); 
 scissors.addEventListener("click", () => playRound('scissors', computerPlay())); 
 
+// Focus Event Listner
+rock.addEventListener("mouseenter", () => mouseEnter('rock'));
+// paper.addEventListener("mouseenter", () => ); 
+// scissors.addEventListener("mouseenter", () => ); 
+
+
+// Mouse enter content change
+
+function mouseEnter (playerSelection){
+  if (playerSelection === 'rock') {
+    rock.querySelector('h2').style.display = "none";
+  }
+}
 
 
 

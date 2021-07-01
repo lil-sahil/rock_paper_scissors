@@ -82,8 +82,33 @@ body {
 
 .player-choice > div {
     border: #fcad03 1px solid;
+    border-radius: 5px;
     padding: 2rem 1rem;
     min-width: 200px;
+}
+
+/* Round */
+
+.round {
+    border: white 3px solid;
+    padding: 1.5rem;
+    border-radius: 50%;
+    justify-content: space-between
+}
+/* 
+.round > h2 {
+    margin-bottom: 1rem;
+} */
+
+.round p {
+    font-size: 1.5rem;
+    font-weight: weight;
+}
+
+.round div {
+    height: 2px;
+    border: red 1px solid;
+    width: 100%;
 }
 
 .computer-choice {
