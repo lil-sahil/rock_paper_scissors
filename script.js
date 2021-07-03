@@ -1,6 +1,7 @@
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const compVerbage = document.querySelector(".computer-choice")
 const computerChoice = document.querySelector(".choice"); 
 const result = document.querySelector("#result p"); 
 const round = document.querySelector(".round p");
@@ -19,6 +20,7 @@ function randomSelection(choices){
 
 function computerPlay(){
   let computerChoices = ["rock", "paper", "scissors"];
+  compVerbage.style.visibility = 'visible';
   return computerChoices[randomSelection(computerChoices.length)]
 }
 
@@ -147,6 +149,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 function checkGameWinner(currentUserScore, currentComputerScore) {
+  compVerbage.style.visibility = 'hidden';
   let scoreDiff = currentUserScore - currentComputerScore;
   roundInt = 1;
   uScore = 0;

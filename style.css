@@ -76,6 +76,7 @@ body {
 
 #game {
     height: 80vh;
+    color: white;
 }
 
 .player-choice {
@@ -120,9 +121,9 @@ body {
 /* Computer Choice */
 
 .computer-choice {
-    border: 1px red solid;
     width: 100%;
-    order: -1; 
+    order: -1;
+    visibility: hidden; 
 }
 
 /* Result */
@@ -135,4 +136,8 @@ body {
 
 #result div > div {
     flex: 1 1 0px;
+}
+
+#result p {
+    height: 2rem;
 }
