@@ -24,11 +24,19 @@
     align-items: center;
 }
 
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
 }
+
 
 .text-primary {
     color: #33312a;
@@ -94,6 +102,7 @@ body {
     padding: 1.5rem;
     border-radius: 50%;
     justify-content: space-between;
+    margin-bottom: 3rem;
 }
 
 
@@ -116,9 +125,14 @@ body {
     order: -1; 
 }
 
-/* Choice */
+/* Result */
 
 #result {
+    position: relative;
+    top:-4rem;
     width: 100%;
-    border: 1px red solid;
+}
+
+#result div > div {
+    flex: 1 1 0px;
 }
